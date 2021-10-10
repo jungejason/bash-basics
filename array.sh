@@ -52,3 +52,25 @@ done
 # overwrite an item
 allThreads[3]=999 # note that there can't be whitespaces
 echo ${allThreads[3]} # prints out 999
+
+# delete an item
+echo before unset
+for value in ${allThreads[@]}; do
+  echo $value
+done
+  echo after unset
+unset allThreads[2]
+for value in ${allThreads[@]}; do
+  echo $value
+done
+### before unset
+### 1
+### 2
+### 4
+### 999
+### 16
+### after unset
+### 1
+### 2
+### 999
+### 16
