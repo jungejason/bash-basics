@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # this is good example:
+# note that the `function` keyword is optional
 usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
 
 # The leading `:` in the opstring makes the invalid option to go to the `*` switch case

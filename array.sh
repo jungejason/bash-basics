@@ -10,6 +10,8 @@ echo $allThreads # echo only the first item
 echo $allThreads[2] # print an item doesn't work. Prints 1[2]
 echo ${allThreads[2]} # works. prints 4
 echo ${#allThreads[@]} # size of aaray. print 3
+echo ${!allThreads[@]} # indexes: 0 1 2
+echo ${allThreads[@]} # array items: 1 2 4
 
 # Get a slice of an array
 new=${allThreads[@]:1:2}
