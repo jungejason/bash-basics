@@ -28,6 +28,9 @@ for key in ${!assArray1[@]}; do
 done
 
 # Unset
+# flower: Rose
+# animal: Tiger
+# bird: Cockatail
 unset assArray1[fruit] # note that there's no ${}
 for key in ${!assArray1[@]}; do
   echo $key: ${assArray1[$key]}
