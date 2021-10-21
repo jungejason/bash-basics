@@ -18,6 +18,10 @@ echo ${assArray2[@]}  # 3 bb   Note that the order is not guaranteed
 assArray2[kkk]=mmm
 echo ${assArray2[@]}  # mmm 3 bb  
 
+# Another way to add item
+assArray2+=([sss]=ttt [xxx]=yyy) # mmm 3 yyy bb ttt
+echo ${assArray2[@]}  # mmm 3 bb  
+
 # Loop through key:value
 # flower: Rose
 # fruit: Mango
@@ -35,6 +39,8 @@ unset assArray1[fruit] # note that there's no ${}
 for key in ${!assArray1[@]}; do
   echo $key: ${assArray1[$key]}
 done
+
+
 
 
 
